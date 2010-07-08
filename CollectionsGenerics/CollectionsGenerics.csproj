@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5F634880-A15B-426E-A6D7-81DCD927A5C8}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>CollectionsGenerics</RootNamespace>
+    <AssemblyName>CollectionsGenerics</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CollectionsGenerics\Collections\OriginalCollections.cs" />
+    <Compile Include="CollectionsGenerics\Generics\CustomTypes\Element.cs" />
+    <Compile Include="CollectionsGenerics\Generics\CustomTypes\Musketeers.cs" />
+    <Compile Include="CollectionsGenerics\Generics\CustomTypes\PeriodicTable.cs" />
+    <Compile Include="CollectionsGenerics\Generics\GalacticFederation.cs" />
+    <Compile Include="CollectionsGenerics\Generics\GenericBasics.cs" />
+    <Compile Include="CollectionsGenerics\Generics\GenericMethods.cs" />
+    <Compile Include="CollectionsGenerics\Generics\IShop.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\AlienPlanet.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\AlienSolarSystem.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\HumanPlanet.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\Planet.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\ISolarSystem.cs" />
+    <Compile Include="CollectionsGenerics\Generics\Universe\HumanSolarSystem.cs" />
+    <Compile Include="CollectionsGenerics\MainCollectionsGenerics.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\chapter-07\ExceptionsErrors.csproj">
+      <Project>{666302F3-B240-4320-A109-61223B1B3808}</Project>
+      <Name>ExceptionsErrors</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
