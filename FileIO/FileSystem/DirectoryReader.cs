@@ -8,6 +8,12 @@ namespace FileIO.FileSystem
 {
    class DirectoryReader
    {
+      public DirectoryReader()
+      {
+         const string winDir = @"C:\Windows";
+         ShowDirectoryStats( winDir );
+      }
+
       public static void ShowDirectoryStats(string path)
       {
          DirectoryInfo dInfo = new DirectoryInfo(path);

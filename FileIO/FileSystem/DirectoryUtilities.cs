@@ -8,6 +8,19 @@ namespace FileIO.FileSystem
 {
    class DirectoryUtilities
    {
+      public DirectoryUtilities()
+      {
+         const string baseDir = @"E:\";
+         const string genDir = "GeneratedDir";
+         const string subDir = "GeneratedSubDir";
+         CreateDir( baseDir, genDir );
+         CreateDir( baseDir + genDir, subDir );
+         ReadLogicalDrives();
+         DeleteDirectories( baseDir + genDir + @"\" + subDir );
+         ReadDriveStats();
+
+      }
+
       public static void CreateDir( string baseDir, string newDirName )
       {
          DirectoryInfo dInfo = new DirectoryInfo(baseDir);

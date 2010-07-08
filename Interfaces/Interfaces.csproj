@@ -112,7 +112,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\chapter-07\ExceptionsErrors.csproj">
+    <ProjectReference Include="..\ExceptionsErrors\ExceptionsErrors.csproj">
       <Project>{666302F3-B240-4320-A109-61223B1B3808}</Project>
       <Name>ExceptionsErrors</Name>
     </ProjectReference>

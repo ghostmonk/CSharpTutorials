@@ -43,11 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UsingFileStream\WorkingWithFileStreams.cs" />
     <Compile Include="FileSystem\DirectoryUtilities.cs" />
     <Compile Include="FileSystem\DirectoryReader.cs" />
     <Compile Include="FileSystem\FileUtilities.cs" />
+    <Compile Include="FileSystem\TaskMaker.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsingFileStream\WriteReadAFile.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
