@@ -11,7 +11,7 @@ namespace ShapeMaker
         static void Main(string[] args)
         {
             Square square = new Square();
-            square.draw();
+            square.Draw();
             Console.ReadLine();
         }
     }
