@@ -5,6 +5,7 @@ using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Runtime.Serialization.Formatters.Soap;
 using System.Text;
+using System.Xml.Serialization;
 
 namespace ObjectSerialization.CarExample
 {
@@ -22,11 +23,16 @@ namespace ObjectSerialization.CarExample
          corvette.RadioPlayer.StationPresets = new double[] { 89.3, 97.9, 103.1 };
 
          string CorvetteBinFile = "BinCorvetteData.dat";
-         string CorvetteSoapFile = "SoapCorvetteData.dat";
+         string CorvetteSoapFile = "CorvetteSoap.xml";
+         string CorvetteXMLFile = "Corvette.xml";
+         string CorvetteXMLList = "CorvetteList.xml";
+         string CorvetteBinList = "CorvetteList.dat";
          SaveAsBinaryFormat( corvette, CorvetteBinFile );
          ReadBinaryFile( CorvetteBinFile );
 
          SaveAsSoapFormat(corvette, CorvetteSoapFile);
+         SaveAsXmlFormat(corvette, CorvetteXMLFile);
+         SerializeList(CorvetteXMLList, CorvetteBinList);
       }
 
       private void SaveAsBinaryFormat(object objGraph, string fileName)
@@ -63,6 +69,38 @@ namespace ObjectSerialization.CarExample
          }
 
          Console.WriteLine( "Corvette has been saved to Soap Format" );
+      }
+
+      private void SaveAsXmlFormat( object obj, string fileName )
+      {
+         XmlSerializer xmlFormatter = new XmlSerializer( typeof( Corvette ), new Type[] { typeof(Radio), typeof(Car)} );
+         using (Stream stream = new FileStream(fileName, FileMode.Create,FileAccess.Write, FileShare.None))
+         {
+            xmlFormatter.Serialize(stream, obj);
+         }
+         Console.WriteLine("Corvette saved to XML Format");
+      }
+
+      private void SerializeList( string xmlFile, string binFile )
+      {
+         List<Corvette> corvettes = new List<Corvette>();
+         corvettes.Add( new Corvette( 100, true ) );
+         corvettes.Add( new Corvette( 100, false ) );
+         corvettes.Add( new Corvette( 150, true ) );
+         corvettes.Add( new Corvette( 150, false ) );
+
+         using (Stream stream = new FileStream( xmlFile, FileMode.Create, FileAccess.Write, FileShare.None ))
+         {
+            XmlSerializer xmlSerializer = new XmlSerializer(typeof(List<Corvette>), new Type[]{typeof(Corvette), typeof(Car), typeof(Radio)});
+            xmlSerializer.Serialize(stream, corvettes);
+         }
+
+         using (Stream binStream = new FileStream( binFile, FileMode.Create, FileAccess.Write, FileShare.None))
+         {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            binaryFormatter.Serialize(binStream, binFile);
+         }
+         Console.WriteLine("Corvettes Serialized");
       }
    }
 }

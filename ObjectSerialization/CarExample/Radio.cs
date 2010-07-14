@@ -6,7 +6,7 @@ using System.Text;
 namespace ObjectSerialization.CarExample
 {
    [Serializable]
-   class Radio
+   public class Radio
    {
       public bool HasTweeters
       {

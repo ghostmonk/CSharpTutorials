@@ -2,17 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using ObjectSerialization.CarExample;
-using ObjectSerialization.Utils;
 
-namespace ObjectSerialization
+namespace AutoLotClient
 {
    class Program
    {
       static void Main(string[] args)
       {
-         //new UsingSerializable();
-         new CarSerializer();
+         new AutoLotActionManager();
          Console.ReadLine();
       }
    }

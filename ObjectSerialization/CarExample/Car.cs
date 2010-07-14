@@ -6,7 +6,7 @@ using System.Text;
 namespace ObjectSerialization.CarExample
 {
    [Serializable]
-   class Car
+   public class Car
    {
       public bool IsHatchBack
       {
