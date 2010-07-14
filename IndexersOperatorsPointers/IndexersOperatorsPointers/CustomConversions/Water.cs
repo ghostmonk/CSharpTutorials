@@ -29,7 +29,7 @@ namespace IndexersOperatorsPointers.IndexersOperatorsPointers.CustomConversions
 
       public static implicit operator Water(int value)
       {
-         int constrained = Math.Max( 0, Math.Min( value, typeof( WaterType ).GetEnumNames().Length - 1 ) );
+         int constrained = Math.Max(0, Math.Min(value, Enum.GetValues(typeof(WaterType)).Length - 1));
          return new Water( (WaterType)constrained );
       }
 

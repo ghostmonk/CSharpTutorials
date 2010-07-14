@@ -4,6 +4,7 @@ using System.Configuration;
 using System.Linq;
 using System.Text;
 using People;
+using VBPeople;
 
 namespace ConsumeLivingThings
 {

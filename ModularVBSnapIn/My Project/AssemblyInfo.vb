@@ -10,15 +10,15 @@ Imports System.Runtime.InteropServices
 
 <Assembly: AssemblyTitle("ModularVBSnapIn")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Microsoft")> 
+<Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("ModularVBSnapIn")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2010")> 
+<Assembly: AssemblyCopyright("Copyright ©  2010")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("6c3ee0cd-da4e-45e9-8391-bef3fb312054")> 
+<Assembly: Guid("66b9c767-22fe-417d-b900-d30722a91ddf")> 
 
 ' Version information for an assembly consists of the following four values:
 '
