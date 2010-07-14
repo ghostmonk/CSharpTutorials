@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using MiscADO.AsyncCmdObject;
+using MiscADO.DataSets;
 using MiscADO.introADO;
 using MiscADO.Transations;
 
@@ -14,7 +15,9 @@ namespace MiscADO
       {
          //new ConnectionFactory();
          //new AsyncConnect();
-         new TransactionManagement();
+         //new TransactionManagement();
+         new SimpleDataSet();
+         //new DataRowState();
          Console.ReadLine();
       }
    }

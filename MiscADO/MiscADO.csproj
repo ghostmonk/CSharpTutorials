@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AsyncCmdObject\AsyncConnect.cs" />
+    <Compile Include="DataSets\DataRowState.cs" />
+    <Compile Include="DataSets\SimpleDataSet.cs" />
     <Compile Include="introADO\ConnectionFactory.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
