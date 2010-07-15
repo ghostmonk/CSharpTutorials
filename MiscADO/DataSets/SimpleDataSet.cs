@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Text;
+using AutoLotClient.Utils;
 
 namespace MiscADO.DataSets
 {
@@ -18,34 +19,9 @@ namespace MiscADO.DataSets
          AddRows( inventoryTable );
          inventoryTable.PrimaryKey = new DataColumn[] { inventoryTable.Columns[0] };
          inventory.Tables.Add( inventoryTable );
-         PrintDataSet( inventory );
-      }
-
-      private void PrintDataSet(DataSet set)
-      {
-         Console.WriteLine( "DataSet : {0}", set.DataSetName );
-
-         foreach (DictionaryEntry entry in set.ExtendedProperties)
-            Console.WriteLine( "Key = {0}, Value = {1}", entry.Key, entry.Value );
-         Console.WriteLine();
-
-         foreach (DataTable table in set.Tables)
-         {
-            Console.WriteLine( "=> {0} Table:", table.TableName );
-
-            for (int col = 0; col < table.Columns.Count; col++)
-            {
-               Console.WriteLine( table.Columns[col].ColumnName + "\t" );
-            }
-            Console.WriteLine("\n------------------------------------------");
-
-            for (int row = 0; row < table.Rows.Count; row++)
-            {
-               for (int col = 0; col < table.Columns.Count; col++)
-                  Console.Write(table.Rows[row][col].ToString() + "\t");
-               Console.WriteLine();
-            }
-         }
+         Console.WriteLine( DbUtils.DataSetToString( inventory ) );
+         DbUtils.SaveDataSetAsBinary( inventory, "carInventory" );
+         DbUtils.SaveDataSetAsXml( inventory, "carInventory" );
       }
 
       private DataSet GetInventory(string title)
