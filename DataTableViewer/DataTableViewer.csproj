@@ -3,13 +3,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProductVersion>9.0.30729</ProductVersion>
+    <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{88200C9F-DA8B-4783-9AF1-4DDAB7D7AFB1}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{326C8E9E-DDB1-4FA4-A017-E8E5437A9218}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MiscADO</RootNamespace>
-    <AssemblyName>MiscADO</AssemblyName>
+    <RootNamespace>DataTableViewer</RootNamespace>
+    <AssemblyName>DataTableViewer</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -35,43 +35,47 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AsyncCmdObject\AsyncConnect.cs" />
-    <Compile Include="DataSets\DataRowState.cs" />
-    <Compile Include="DataSets\SimpleDataSet.cs" />
-    <Compile Include="introADO\ConnectionFactory.cs" />
+    <Compile Include="CarInventoryForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarInventoryForm.Designer.cs">
+      <DependentUpon>CarInventoryForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Car.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Transations\TransactionManagement.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-    <None Include="bin\Debug\carInventory.xsc">
-      <DependentUpon>carInventory.xsd</DependentUpon>
+    <EmbeddedResource Include="CarInventoryForm.resx">
+      <DependentUpon>CarInventoryForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="bin\Debug\carInventory.xss">
-      <DependentUpon>carInventory.xsd</DependentUpon>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AutoLotClient\AutoLotClient.csproj">
-      <Project>{1DDF0CFF-58A7-4E8D-BDD1-576CD96EF1C8}</Project>
-      <Name>AutoLotClient</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\AutoLotConnectedLayer\AutoLotConnectedLayer.csproj">
-      <Project>{B479631F-5E96-4B19-BCCA-7A6074EDF8AD}</Project>
-      <Name>AutoLotConnectedLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="bin\Debug\" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
