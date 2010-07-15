@@ -23,15 +23,15 @@ namespace ConstructingCode.AdvancedConstruction
 
          string[] myBooks = new string[100];
 
-         PrintArray( "This int was found ", myInts );
-         PrintArray( "This book was found", myBooks );
+         PrintArray( "This int was found ", myInts, false );
+         PrintArray( "This book was found", myBooks, false );
       }
 
       private void ArrayInitialization()
       {
          string[] stringCollection = new[] { "one", "two", "three" };
-         PrintArray( "String Array Value:", stringCollection );
-         PrintArray( "Boolean Array:", new[] { true, false, true } );
+         PrintArray( "String Array Value:", stringCollection, false );
+         PrintArray( "Boolean Array:", new[] { true, false, true }, false );
       }
 
       private void RectMultiDimensionalArrays()
@@ -77,7 +77,7 @@ namespace ConstructingCode.AdvancedConstruction
          PrintArray( "", bands, true );
       }
 
-      private void PrintArray(string pref, Array list, bool sameLine = false)
+      private void PrintArray(string pref, Array list, bool sameLine)
       {
          foreach (object item in list)
             if (item != null)

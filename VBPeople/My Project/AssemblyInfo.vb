@@ -8,17 +8,17 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("VBPeople")> 
+<Assembly: AssemblyTitle("LivingThings")> 
 <Assembly: AssemblyDescription("")> 
-<Assembly: AssemblyCompany("Microsoft")> 
+<Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("VBPeople")> 
-<Assembly: AssemblyCopyright("Copyright © Microsoft 2010")> 
+<Assembly: AssemblyCopyright("Copyright ©  2010")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: ComVisible(False)>
 
 'The following GUID is for the ID of the typelib if this project is exposed to COM
-<Assembly: Guid("94126cbf-c9ee-4a5c-84ff-ba2154d27a50")> 
+<Assembly: Guid("e380dd2c-e361-4e29-8cc3-a872bbae32ce")> 
 
 ' Version information for an assembly consists of the following four values:
 '
