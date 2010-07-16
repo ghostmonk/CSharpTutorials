@@ -5,6 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using AutoLotClient.Utils;
 using MiscADO.AsyncCmdObject;
+using MiscADO.DataAdapting;
 using MiscADO.DataSets;
 using MiscADO.introADO;
 using MiscADO.Transations;
@@ -18,9 +19,9 @@ namespace MiscADO
          //new ConnectionFactory();
          //new AsyncConnect();
          //new TransactionManagement();
-         new SimpleDataSet();
+         //new SimpleDataSet();
          //new DataRowState();
-
+         new SimpleDataAdapter();
          Console.ReadLine();
       }
    }
