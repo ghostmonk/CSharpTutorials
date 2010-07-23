@@ -18,5 +18,10 @@ namespace DelegatesEventsLambdas.DelegatesEventsLambdas.Events
       {
          get { return msg; }
       }
+
+      public int random
+      {
+         get { return new Random().Next(); }
+      }
    }
 }

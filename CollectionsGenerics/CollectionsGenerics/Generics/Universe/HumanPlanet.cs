@@ -4,24 +4,18 @@ namespace CollectionsGenerics.CollectionsGenerics.Generics.Universe
 {
    class HumanPlanet : Planet
    {
-      private bool visitedByMan;
-
-      public bool VisitedByMan
-      {
-         get { return this.visitedByMan; }
-         set { this.visitedByMan = value; }
-      }
+      public bool VisitedByMan { get; set; }
 
       public HumanPlanet(string name, bool visitedByMan) : this( name, visitedByMan, new List<string>() ) { }
       
       public HumanPlanet(string name, bool visitedByMan, List<string> animals) : base( name, animals )
       {
-         this.visitedByMan = visitedByMan;
+         this.VisitedByMan = visitedByMan;
       }
 
       public HumanPlanet(string name) : base( name )
       {
-         this.visitedByMan = false;
+         this.VisitedByMan = false;
       }
    }
 }

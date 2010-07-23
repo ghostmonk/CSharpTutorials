@@ -4,7 +4,6 @@ namespace CollectionsGenerics.CollectionsGenerics.Generics.Universe
 {
    class Planet
    {
-      private string name;
       private List<string> animals;
 
       public Planet( string name, List<string> animals ) : this(name)
@@ -14,7 +13,7 @@ namespace CollectionsGenerics.CollectionsGenerics.Generics.Universe
 
       public Planet( string name )
       {
-         this.name = name;   
+         this.Name = name;   
          animals = new List<string>();
       }
 
@@ -23,10 +22,7 @@ namespace CollectionsGenerics.CollectionsGenerics.Generics.Universe
          this.animals.Add(animal);
       }
 
-      public string Name
-      {
-         get { return this.name; }
-      }
+      public string Name { get; private set; }
 
       public bool hasLife
       {

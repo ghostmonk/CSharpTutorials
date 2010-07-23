@@ -2,7 +2,7 @@
 
 namespace DelegatesEventsLambdas.DelegatesEventsLambdas.Events
 {
-   class SimpleResponder
+   class SimpleResponder 
    {
       public event EventHandler<MessageEventArgs> NameInputEvent;
       public event EventHandler<MessageEventArgs> AgeInputEvent;
